@@ -6,7 +6,9 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 @Getter
 @Entity
 @Table(name = "posts")
@@ -26,19 +28,18 @@ public class Post{
     private String content;
 
     // 게시글 생성 시간
-    private String created_at;
+    private String createdAt;
 
     // 게시글 마지막 수정 시간
-    private String updated_at;
+    private String updatedAt;
 
     // 삭제된 시간
-    private String deleted_at;
+    private String deletedAt;
 
+    // 생성자
     private Post(String memberId, String title, String content){
         this.memberId = memberId;
         this.title = title;
         this.content = content;
     }
-
-    protected Post(){}
 }
