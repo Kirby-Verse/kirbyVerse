@@ -27,11 +27,10 @@ public class Follow {
     @Column(nullable = false)
     private String following_id;
 
-    // 요청 상태 status enum('Pending', 'Accepted', 'Rejected')
+    // 요청 상태 status enum('Pending', 'Accepted')
     public enum Status {
         PENDING,   // 대기
-        ACCEPTED,  // 요청 수락
-        REJECTED   // 요청 거절
+        ACCEPTED  // 요청 수락
     }
 
     // 생성 시간
